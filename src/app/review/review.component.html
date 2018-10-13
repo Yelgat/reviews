@@ -1,0 +1,15 @@
+<div class="review-card">
+  <div class="reviewer">
+    <div class="reviewer-name">{{ review.reviewer.name }}</div>
+    <img [src]="review.reviewer.thumbnail" alt="">
+    <div class="reviewer-name">{{ review.reviewer.location }}</div>
+    <div class="reviewer-name">Reviews: {{ review.reviewer.reviews }}</div>
+    <div class="reviewer-name">Friends: {{ review.reviewer.friends }}</div>
+  </div>
+  <div class="review">
+    <div class="review-date">{{ review['review-date'] | date }}</div>
+    <div>{{ review.stars }}</div>
+    <div class="review-text">{{ review['review-text'] }}</div>
+  </div>
+</div>
+<hr>

@@ -1,0 +1,11 @@
+div.review-card {
+  padding: 15px;
+  display: flex;
+}
+div.reviewer {
+  width: 30%;
+}
+
+div.review {
+  width: 70%;
+}
