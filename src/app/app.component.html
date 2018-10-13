@@ -1,1 +1,14 @@
 <app-review *ngFor="let review of reviews" [review]="review"></app-review>
+<div class="pagination">
+  <div>Page {{ page }} of {{ pageCount }}</div>
+  <div>
+    <ul class="pagination">
+      <li *ngIf="page != 1"><a [href]="'?page=' + (page - 1)">< Previous</a></li>
+      <li *ngFor="let num of pageNumbers">
+        <a *ngIf="num != page" [href]="'?page=' + num">{{ num }}</a>
+        <span *ngIf="num == page">{{ num }}</span>
+      </li>
+      <li *ngIf="page != pageCount"><a [href]="'?page=' + (page + 1)">Next ></a></li>
+    </ul>
+  </div>
+</div>
