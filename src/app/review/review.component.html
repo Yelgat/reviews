@@ -7,9 +7,9 @@
     <div class="reviewer-name">Friends: {{ review.reviewer.friends }}</div>
   </div>
   <div class="review">
-    <div class="review-date">{{ review['review-date'] | date }}</div>
+    <div class="review-date">{{ review.createdAt | date }}</div>
     <div>{{ review.stars }}</div>
-    <div class="review-text">{{ review['review-text'] }}</div>
+    <div class="review-text">{{ review.text }}</div>
   </div>
 </div>
 <hr>

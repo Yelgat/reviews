@@ -3,6 +3,7 @@
   <div>Page {{ page }} of {{ pageCount }}</div>
   <div>
     <ul class="pagination">
+      <!-- TODO Fix pagination so it keeps /r/name-city in URL -->
       <li *ngIf="page != 1"><a [href]="'?page=' + (page - 1)">< Previous</a></li>
       <li *ngFor="let num of pageNumbers">
         <a *ngIf="num != page" [href]="'?page=' + num">{{ num }}</a>

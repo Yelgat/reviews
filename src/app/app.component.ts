@@ -21,14 +21,14 @@ function httpGetAsync(theUrl, callback) {
 export class AppComponent implements OnInit {
   title = 'yelgat-reviews';
   reviews: Review[];
-  page: Number;
-  pageCount: Number;
-  pageNumbers: Number[];
+  page: number;
+  pageCount: number;
+  pageNumbers: number[];
 
   ngOnInit() {
     const params = new URLSearchParams(location.search);
     const reviewPage = params.get('page') === null ? 1 : Number.parseInt(params.get('page'));
-    httpGetAsync(`http://localhost:8080?page=${reviewPage}`, (data) => {
+    httpGetAsync(`http://localhost:8080${window.location.pathname}?page=${reviewPage}`, (data) => {
       const body = JSON.parse(data);
       this.reviews = body.reviews;
       this.page = reviewPage;

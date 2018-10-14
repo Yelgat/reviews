@@ -2,7 +2,7 @@ import { Reviewer } from './reviewer';
 
 export class Review {
   'reviewer': Reviewer;
-  'review-date': string;
+  'createdAt': string;
   'stars': number;
-  'review-text': string;
+  'text': string;
 }
