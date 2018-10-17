@@ -14,7 +14,7 @@ function httpGetAsync(theUrl, callback) {
 }
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-root-reviews',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
   page: number;
   pageCount: number;
   pageNumbers: number[];
+  location: string = window.location.pathname;
 
   ngOnInit() {
     const params = new URLSearchParams(location.search);
